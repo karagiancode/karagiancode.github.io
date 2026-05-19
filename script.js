@@ -75,6 +75,20 @@ const translations = {
     "skills.c8.title": "Τομείς Ενδιαφέροντος",
     "skills.certs": "Πιστοποιήσεις",
 
+     // Thesis
+    "thesis.badge": "ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ · ΣΕ ΕΞΕΛΙΞΗ",
+    "thesis.title": "DIY Ρομποτικός Βραχίονας",
+    "thesis.subtitle": "Σχεδίαση & ανάπτυξη DIY robotic arm με σταθερό χειρισμό αντικειμένων — από αυγό έως 2kg",
+    "thesis.desc": "Αναπτύσσω έναν <strong>DIY ρομποτικό βραχίονα</strong> ικανό να σηκώνει σταθερά <strong>αντικείμενα από 500g έως 2kg</strong> με την απαραίτητη ευαισθησία ώστε να μπορεί να πιάσει <strong>ακόμα και ένα αυγό χωρίς να σπάσει</strong>. Δουλεύω πάνω στην <strong>κινηματική</strong> του και αναζητώ τη βέλτιστη προσέγγιση για ομαλή και ακριβή κίνηση.",
+    "thesis.pillar1.title": "Κινηματική",
+    "thesis.pillar1.desc": "Forward / Inverse Kinematics — αναζήτηση βέλτιστου αλγορίθμου",
+    "thesis.pillar2.title": "Hardware",
+    "thesis.pillar2.desc": "Πολλαπλά stepper motors, Raspberry Pi 5 + 2× Raspberry Pi Pico",
+    "thesis.pillar3.title": "Software",
+    "thesis.pillar3.desc": "Ανάπτυξη control software & συντονισμός controllers",
+    "thesis.pillar4.title": "Στόχος",
+    "thesis.pillar4.desc": "Σταθερότητα + ευαισθησία: από αυγό μέχρι 2kg",
+
     // Projects
     "proj.title": "Έργα",
     "proj.intro": "Επιλεγμένα projects από το GitHub μου — embedded systems, Python automation, ρομποτική και front-end.",
@@ -180,6 +194,20 @@ const translations = {
     "skills.c7.l2": "English — B2",
     "skills.c8.title": "Areas of Interest",
     "skills.certs": "Certifications",
+
+     // Thesis
+    "thesis.badge": "BACHELOR THESIS · IN PROGRESS",
+    "thesis.title": "DIY Robotic Arm",
+    "thesis.subtitle": "Design & development of a DIY robotic arm with stable object handling — from an egg up to 2kg",
+    "thesis.desc": "I'm developing a <strong>DIY robotic arm</strong> capable of stably lifting <strong>objects from 500g up to 2kg</strong>, with the precision required to <strong>grip an egg without breaking it</strong>. Currently working on the <strong>kinematics</strong> and exploring the optimal approach for smooth, accurate motion.",
+    "thesis.pillar1.title": "Kinematics",
+    "thesis.pillar1.desc": "Forward / Inverse Kinematics — searching for the optimal algorithm",
+    "thesis.pillar2.title": "Hardware",
+    "thesis.pillar2.desc": "Multiple stepper motors, Raspberry Pi 5 + 2× Raspberry Pi Pico",
+    "thesis.pillar3.title": "Software",
+    "thesis.pillar3.desc": "Control software development & multi-controller coordination",
+    "thesis.pillar4.title": "Goal",
+    "thesis.pillar4.desc": "Stability + sensitivity: from an egg to 2kg",
 
     "proj.title": "Projects",
     "proj.intro": "Selected projects from my GitHub — embedded systems, Python automation, robotics and front-end.",
