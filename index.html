@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="el" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vasileios Karagiannidis — Computer & Electronic Systems Engineering student, IEEE Vice President, Robotics researcher." />
+  <meta name="author" content="Vasileios Karagiannidis" />
+  <title>Vasileios Karagiannidis — Engineer & Researcher</title>
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230A0A0F'/%3E%3Ctext x='50' y='68' font-family='Arial Black,sans-serif' font-size='52' font-weight='900' text-anchor='middle' fill='%23C5FF3F'%3EVK%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Anton (display) + Manrope (body) + JetBrains Mono (code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =========== ANIMATED BACKGROUND =========== -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <!-- =========== NAVIGATION =========== -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__logo">
+      <span class="nav__logo-mark">VK</span>
+      <span class="nav__logo-dot"></span>
+    </a>
+    <nav class="nav__links">
+      <a href="#about" data-i18n="nav.about">Σχετικά</a>
+      <a href="#experience" data-i18n="nav.experience">Εμπειρία</a>
+      <a href="#skills" data-i18n="nav.skills">Δεξιότητες</a>
+      <a href="#projects" data-i18n="nav.projects">Έργα</a>
+      <a href="#contact" data-i18n="nav.contact">Επικοινωνία</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+        <span class="lang-toggle__option active" data-lang="el">EL</span>
+        <span class="lang-toggle__sep">/</span>
+        <span class="lang-toggle__option" data-lang="en">EN</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =========== HERO =========== -->
+  <section class="hero" id="hero">
+    <div class="hero__container">
+      <div class="hero__badge reveal">
+        <span class="hero__badge-dot"></span>
+        <span data-i18n="hero.badge">Διαθέσιμος για ευκαιρίες</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__title-line reveal" data-i18n="hero.title1">ΒΑΣΙΛΕΙΟΣ</span>
+        <span class="hero__title-line hero__title-outline reveal" style="--delay: 0.1s" data-i18n="hero.title2">ΚΑΡΑΓΙΑΝΝΙΔΗΣ</span>
+      </h1>
+      <p class="hero__role reveal" style="--delay: 0.2s">
+        <span class="hero__role-mono">&gt;</span>
+        <span data-i18n="hero.role">Junior Software / Embedded Engineer · Robotics Researcher</span>
+        <span class="hero__cursor">_</span>
+      </p>
+      <p class="hero__desc reveal" style="--delay: 0.3s" data-i18n="hero.desc">
+        Τελειόφοιτος Μηχανικός Πληροφορικής με εμπειρία σε Python, embedded systems
+        (ESP32, Raspberry Pi) και έρευνα σε computer vision με το ρομπότ Spot της
+        Boston Dynamics. Αντιπρόεδρος IEEE — αναζητώ θέση πρακτικής ή Junior σε
+        Software, Embedded, Robotics ή IoT.
+      </p>
+      <div class="hero__cta reveal" style="--delay: 0.4s">
+        <a href="#projects" class="btn btn--primary">
+          <span data-i18n="hero.cta1">Δες τα έργα μου</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="cv/Karagiannidis_CV_EL.pdf" download class="btn btn--ghost" id="cvDownload">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          <span data-i18n="hero.cta2">Κατέβασε το CV</span>
+        </a>
+      </div>
+      <div class="hero__socials reveal" style="--delay: 0.5s">
+        <a href="https://github.com/karagiancode" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 0z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/REPLACE-WITH-YOUR-LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.3A1.7 1.7 0 1 1 8.2 6.6 1.7 1.7 0 0 1 6.5 8.3zM19 19h-3v-4.7c0-1.1 0-2.6-1.6-2.6s-1.8 1.2-1.8 2.5V19h-3v-9h2.9v1.2A3.2 3.2 0 0 1 15.2 10c3 0 3.6 2 3.6 4.6V19z"/></svg>
+        </a>
+        <a href="mailto:billykaragian1502@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__decor" aria-hidden="true">
+      <div class="hero__decor-shape hero__decor-shape--1"></div>
+      <div class="hero__decor-shape hero__decor-shape--2"></div>
+      <div class="hero__decor-shape hero__decor-shape--3"></div>
+      <div class="hero__decor-code">
+        <span>01001011</span>
+        <span>10110100</span>
+        <span>11010011</span>
+      </div>
+    </div>
+
+    <div class="hero__scroll reveal" style="--delay: 0.7s">
+      <span data-i18n="hero.scroll">scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- =========== ABOUT =========== -->
+  <section class="section" id="about">
+    <div class="section__container">
+      <div class="section__head reveal-up">
+        <span class="section__num">01</span>
+        <h2 class="section__title" data-i18n="about.title">Σχετικά με μένα</h2>
+        <div class="section__line"></div>
+      </div>
+      <div class="about__grid">
+        <div class="about__main reveal-up">
+          <p data-i18n="about.p1">
+            Είμαι τελειόφοιτος <strong>Μηχανικός Πληροφορικής & Ηλεκτρονικών Συστημάτων</strong>
+            στο Διεθνές Πανεπιστήμιο της Ελλάδος. Δουλεύω καθημερινά με
+            <strong>Python, embedded systems και ρομποτική</strong>.
+          </p>
+          <p data-i18n="about.p2">
+            Στο ερευνητικό μου έργο επεξεργάζομαι το <strong>vision system του Spot</strong>
+            (Boston Dynamics) στο NVIDIA Isaac Sim και υλοποιώ tasks
+            <strong>mobile manipulation</strong> — αυτόνομη πλοήγηση και pick & place αντικειμένων.
+            Παράλληλα είμαι <strong>αντιπρόεδρος του IEEE IHU Student Branch</strong>,
+            συν-διοργανωτής του διήμερου IEEEtcon 2026, του διαγωνισμού IEEE Extreme
+            και πολλαπλών τεχνικών workshops.
+          </p>
+          <p data-i18n="about.p3">
+            Πέντε χρόνια ως <strong>Coach Κουζίνας στα KFC</strong> με δίδαξαν ηγεσία, οργάνωση
+            και διαχείριση πίεσης — δεξιότητες που εφαρμόζω και στην τεχνική μου δουλειά.
+            Σύντομα ξεκινώ εθελοντισμό για τον οργανισμό <strong>TechSaloniki</strong>.
+          </p>
+        </div>
+        <div class="about__stats">
+          <div class="stat reveal-up" style="--delay: 0.1s">
+            <span class="stat__num" data-count="5">0</span>
+            <span class="stat__label" data-i18n="about.stat1">χρόνια ηγετικού ρόλου</span>
+          </div>
+          <div class="stat reveal-up" style="--delay: 0.2s">
+            <span class="stat__num" data-count="7" data-suffix="+">0</span>
+            <span class="stat__label" data-i18n="about.stat2">δημόσια projects στο GitHub</span>
+          </div>
+          <div class="stat reveal-up" style="--delay: 0.3s">
+            <span class="stat__num" data-count="5">0</span>
+            <span class="stat__label" data-i18n="about.stat3">γλώσσες προγραμματισμού</span>
+          </div>
+          <div class="stat reveal-up" style="--delay: 0.4s">
+            <span class="stat__num" data-count="2">0</span>
+            <span class="stat__label" data-i18n="about.stat4">IEEEtcon συνέδρια</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== EXPERIENCE =========== -->
+  <section class="section" id="experience">
+    <div class="section__container">
+      <div class="section__head reveal-up">
+        <span class="section__num">02</span>
+        <h2 class="section__title" data-i18n="exp.title">Εμπειρία & Σπουδές</h2>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="timeline">
+
+        <article class="timeline__item reveal-up">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date">2025 – <span data-i18n="exp.now">Σήμερα</span></div>
+          <div class="timeline__card">
+            <span class="timeline__tag" data-i18n="exp.tag.research">ΕΡΕΥΝΑ</span>
+            <h3 data-i18n="exp.r1.title">Ερευνητής — Robotic Simulation & Vision</h3>
+            <p class="timeline__org">Διεθνές Πανεπιστήμιο της Ελλάδος</p>
+            <ul>
+              <li data-i18n="exp.r1.b1">Επεξεργασία του vision system του Spot — άντληση & ανάλυση οπτικών δεδομένων</li>
+              <li data-i18n="exp.r1.b2">Mobile manipulation: αυτόνομη πλοήγηση και pick & place αντικειμένων</li>
+              <li data-i18n="exp.r1.b3">Ανάπτυξη χώρου προσομοίωσης σε NVIDIA Isaac Sim για το Spot της Boston Dynamics</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline__item reveal-up">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date">2025 – 2026</div>
+          <div class="timeline__card">
+            <span class="timeline__tag timeline__tag--secondary" data-i18n="exp.tag.lead">ΗΓΕΣΙΑ</span>
+            <h3 data-i18n="exp.r2.title">Αντιπρόεδρος — IEEE IHU Student Branch</h3>
+            <p class="timeline__org">IEEE — IHU Student Branch</p>
+            <ul>
+              <li data-i18n="exp.r2.b1">Συν-διοργανωτής του διήμερου συνεδρίου IEEEtcon 2026 — ομιλητές, εταιρείες, χορηγοί</li>
+              <li data-i18n="exp.r2.b2">Συμμετοχή στον διεθνή διαγωνισμό IEEE Extreme (Οκτ. 2025) με υψηλή κατάταξη</li>
+              <li data-i18n="exp.r2.b3">Διοργάνωση τεχνικών workshops: «Μικροελεγκτές» & «Μικροελεγκτές + Ρομποτική»</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline__item reveal-up">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date">2020 – 2025</div>
+          <div class="timeline__card">
+            <span class="timeline__tag timeline__tag--tertiary" data-i18n="exp.tag.work">ΕΡΓΑΣΙΑ</span>
+            <h3 data-i18n="exp.r3.title">Coach Κουζίνας</h3>
+            <p class="timeline__org">KFC — Θεσσαλονίκη</p>
+            <ul>
+              <li data-i18n="exp.r3.b1">Εκπαίδευση και καθοδήγηση προσωπικού κουζίνας</li>
+              <li data-i18n="exp.r3.b2">Διαχείριση βαρδιών και ροής εργασιών υπό πίεση</li>
+              <li data-i18n="exp.r3.b3">Διασφάλιση τήρησης προτύπων Food Safety</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline__item reveal-up">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date">2019 – <span data-i18n="exp.now2">Σήμερα</span></div>
+          <div class="timeline__card">
+            <span class="timeline__tag timeline__tag--edu" data-i18n="exp.tag.edu">ΣΠΟΥΔΕΣ</span>
+            <h3 data-i18n="exp.r4.title">Μηχανικός Πληροφορικής & Ηλεκτρονικών Συστημάτων</h3>
+            <p class="timeline__org">Διεθνές Πανεπιστήμιο της Ελλάδος (ΔΙ.ΠΑ.Ε.)</p>
+            <ul>
+              <li data-i18n="exp.r4.b1">Εξειδίκευση: Πληροφορική και Προγραμματισμός</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SKILLS =========== -->
+  <section class="section" id="skills">
+    <div class="section__container">
+      <div class="section__head reveal-up">
+        <span class="section__num">03</span>
+        <h2 class="section__title" data-i18n="skills.title">Δεξιότητες & Tech Stack</h2>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="skills__grid">
+        <div class="skill-card reveal-up">
+          <div class="skill-card__icon">{ }</div>
+          <h3 data-i18n="skills.c1.title">Γλώσσες Προγραμματισμού</h3>
+          <ul class="skill-card__list">
+            <li>Python</li><li>Java</li><li>JavaScript</li><li>SQL</li><li>C/C++ (embedded)</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal-up" style="--delay: 0.1s">
+          <div class="skill-card__icon">🐍</div>
+          <h3 data-i18n="skills.c2.title">Python Stack</h3>
+          <ul class="skill-card__list">
+            <li>yt-dlp</li><li>Tkinter (GUI)</li><li>smtplib / IMAP</li><li data-i18n="skills.c2.l4">Automation scripts</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal-up" style="--delay: 0.2s">
+          <div class="skill-card__icon">⚡</div>
+          <h3 data-i18n="skills.c3.title">Embedded & Hardware</h3>
+          <ul class="skill-card__list">
+            <li>ESP32</li><li>Raspberry Pi</li><li data-i18n="skills.c3.l3">Μικροελεγκτές</li><li data-i18n="skills.c3.l4">Σχεδίαση Κυκλωμάτων</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal-up" style="--delay: 0.3s">
+          <div class="skill-card__icon">🤖</div>
+          <h3 data-i18n="skills.c4.title">Ρομποτική & Vision</h3>
+          <ul class="skill-card__list">
+            <li>NVIDIA Isaac Sim</li><li>Spot SDK</li><li>Computer Vision</li><li>Mobile Manipulation</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal-up" style="--delay: 0.4s">
+          <div class="skill-card__icon">⚙</div>
+          <h3 data-i18n="skills.c5.title">Εργαλεία & Πλατφόρμες</h3>
+          <ul class="skill-card__list">
+            <li>Git / GitHub</li><li>Linux</li><li>VS Code</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal-up" style="--delay: 0.5s">
+          <div class="skill-card__icon">★</div>
+          <h3 data-i18n="skills.c6.title">Soft Skills</h3>
+          <ul class="skill-card__list">
+            <li data-i18n="skills.c6.l1">Ηγεσία</li>
+            <li data-i18n="skills.c6.l2">Ομαδική εργασία</li>
+            <li data-i18n="skills.c6.l3">Διαχείριση πίεσης</li>
+            <li data-i18n="skills.c6.l4">Επικοινωνία</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal-up" style="--delay: 0.6s">
+          <div class="skill-card__icon">🌐</div>
+          <h3 data-i18n="skills.c7.title">Γλώσσες</h3>
+          <ul class="skill-card__list">
+            <li data-i18n="skills.c7.l1">Ελληνικά — Μητρική</li>
+            <li data-i18n="skills.c7.l2">Αγγλικά — B2</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal-up" style="--delay: 0.7s">
+          <div class="skill-card__icon">🎯</div>
+          <h3 data-i18n="skills.c8.title">Τομείς Ενδιαφέροντος</h3>
+          <ul class="skill-card__list">
+            <li>Robotics</li><li>IoT</li><li>Embedded</li><li>Computer Vision</li><li>Automation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="certs reveal-up">
+        <h3 data-i18n="skills.certs">Πιστοποιήσεις</h3>
+        <div class="certs__list">
+          <div class="cert">
+            <span class="cert__icon">📜</span>
+            <div>
+              <strong>International Diploma in IT Skills</strong>
+              <span>Cambridge</span>
+            </div>
+          </div>
+          <div class="cert">
+            <span class="cert__icon">🏥</span>
+            <div>
+              <strong>Basic Life Support (BLS)</strong>
+              <span>European Resuscitation Council</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== PROJECTS =========== -->
+  <section class="section" id="projects">
+    <div class="section__container">
+      <div class="section__head reveal-up">
+        <span class="section__num">04</span>
+        <h2 class="section__title" data-i18n="proj.title">Έργα</h2>
+        <div class="section__line"></div>
+      </div>
+
+      <p class="projects__intro reveal-up" data-i18n="proj.intro">
+        Επιλεγμένα projects από τις σπουδές και την ερευνητική μου δραστηριότητα.
+        Πλήρης λίστα στο GitHub.
+      </p>
+
+      <div class="projects__grid">
+        <a href="https://github.com/karagiancode/Security-System-with-ESP32" target="_blank" rel="noopener" class="project-card reveal-up">
+          <div class="project-card__top">
+            <span class="project-card__tag project-card__tag--alt">EMBEDDED</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+          <h3 data-i18n="proj.p1.title">Security System with ESP32</h3>
+          <p data-i18n="proj.p1.desc">Σύστημα ασφαλείας βασισμένο σε ESP32 — αισθητήρες, ειδοποιήσεις σε πραγματικό χρόνο και έλεγχος.</p>
+          <div class="project-card__tech">
+            <span>ESP32</span><span>C/C++</span><span>Sensors</span><span>IoT</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/karagiancode/automailforieee" target="_blank" rel="noopener" class="project-card reveal-up" style="--delay: 0.1s">
+          <div class="project-card__top">
+            <span class="project-card__tag project-card__tag--py">PYTHON</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+          <h3 data-i18n="proj.p2.title">automailforieee</h3>
+          <p data-i18n="proj.p2.desc">Αυτοματοποιημένη αποστολή email για το συνέδριο IEEEtcon — ομιλητές, χορηγοί, συμμετέχοντες.</p>
+          <div class="project-card__tech">
+            <span>Python</span><span>smtplib</span><span>Automation</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/karagiancode/automailtech" target="_blank" rel="noopener" class="project-card reveal-up" style="--delay: 0.2s">
+          <div class="project-card__top">
+            <span class="project-card__tag project-card__tag--py">PYTHON</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+          <h3 data-i18n="proj.p3.title">automailtech</h3>
+          <p data-i18n="proj.p3.desc">Αυτόματη αποστολή email προς λίστα tech εταιρειών — εργαλείο cold outreach.</p>
+          <div class="project-card__tech">
+            <span>Python</span><span>CSV</span><span>Email</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/karagiancode/youtube-to-mp3" target="_blank" rel="noopener" class="project-card reveal-up" style="--delay: 0.3s">
+          <div class="project-card__top">
+            <span class="project-card__tag">DESKTOP APP</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+          <h3 data-i18n="proj.p4.title">YouTube → MP3 Downloader</h3>
+          <p data-i18n="proj.p4.desc">Επιτραπέζια εφαρμογή για γρήγορη μετατροπή YouTube βίντεο σε MP3, με καθαρό GUI.</p>
+          <div class="project-card__tech">
+            <span>Python</span><span>yt-dlp</span><span>Tkinter</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/karagiancode/movie-planner" target="_blank" rel="noopener" class="project-card reveal-up" style="--delay: 0.4s">
+          <div class="project-card__top">
+            <span class="project-card__tag project-card__tag--py">PYTHON</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+          <h3 data-i18n="proj.p5.title">Movie Planner</h3>
+          <p data-i18n="proj.p5.desc">Online real-time λίστα με ταινίες προς παρακολούθηση — προσωπικό watchlist.</p>
+          <div class="project-card__tech">
+            <span>Python</span><span>Web</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/karagiancode/ItsMyBirthday" target="_blank" rel="noopener" class="project-card reveal-up" style="--delay: 0.5s">
+          <div class="project-card__top">
+            <span class="project-card__tag project-card__tag--alt2">FRONT-END</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+          <h3 data-i18n="proj.p6.title">ItsMyBirthday</h3>
+          <p data-i18n="proj.p6.desc">Προσωπική ιστοσελίδα-πρόσκληση γενεθλίων — interactive front-end project.</p>
+          <div class="project-card__tech">
+            <span>JavaScript</span><span>HTML</span><span>CSS</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/karagiancode/Fast-Food-App" target="_blank" rel="noopener" class="project-card reveal-up" style="--delay: 0.6s">
+          <div class="project-card__top">
+            <span class="project-card__tag">APP</span>
+            <span class="project-card__arrow">↗</span>
+          </div>
+          <h3 data-i18n="proj.p7.title">Fast-Food App</h3>
+          <p data-i18n="proj.p7.desc">Εφαρμογή διαχείρισης παραγγελιών για κατάστημα fast food — εμπνευσμένη από τα KFC.</p>
+          <div class="project-card__tech">
+            <span>App</span>
+          </div>
+        </a>
+
+        <div class="project-card project-card--research reveal-up" style="--delay: 0.7s">
+          <div class="project-card__top">
+            <span class="project-card__tag">RESEARCH</span>
+            <span class="project-card__arrow">🤖</span>
+          </div>
+          <h3 data-i18n="proj.p8.title">Spot — Vision & Mobile Manipulation</h3>
+          <p data-i18n="proj.p8.desc">Ερευνητικό έργο: επεξεργασία vision data του Spot, αυτόνομη πλοήγηση και pick & place στο Isaac Sim.</p>
+          <div class="project-card__tech">
+            <span>Isaac Sim</span><span>Spot SDK</span><span>Python</span><span>Computer Vision</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://github.com/karagiancode?tab=repositories" target="_blank" rel="noopener" class="btn btn--ghost projects__more reveal-up">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 0z"/></svg>
+        <span data-i18n="proj.more">Όλα τα έργα στο GitHub</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- =========== CONTACT =========== -->
+  <section class="section section--contact" id="contact">
+    <div class="section__container">
+      <div class="section__head reveal-up">
+        <span class="section__num">05</span>
+        <h2 class="section__title" data-i18n="contact.title">Επικοινωνία</h2>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__intro reveal-up">
+          <h3 data-i18n="contact.heading">Ας συνδεθούμε.</h3>
+          <p data-i18n="contact.desc">
+            Είμαι ανοιχτός σε ευκαιρίες πρακτικής, ερευνητικές συνεργασίες
+            και ενδιαφέρουσες συζητήσεις γύρω από ρομποτική και embedded.
+          </p>
+
+          <div class="contact__methods">
+            <a href="mailto:billykaragian1502@gmail.com" class="contact__method">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>billykaragian1502@gmail.com</span>
+            </a>
+            <a href="tel:+306940534726" class="contact__method">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+30 694 053 4726</span>
+            </a>
+            <div class="contact__method">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="contact.location">Θεσσαλονίκη, Ελλάδα</span>
+            </div>
+          </div>
+
+          <div class="contact__socials">
+            <a href="https://github.com/karagiancode" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 0z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/REPLACE-WITH-YOUR-LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.3A1.7 1.7 0 1 1 8.2 6.6 1.7 1.7 0 0 1 6.5 8.3zM19 19h-3v-4.7c0-1.1 0-2.6-1.6-2.6s-1.8 1.2-1.8 2.5V19h-3v-9h2.9v1.2A3.2 3.2 0 0 1 15.2 10c3 0 3.6 2 3.6 4.6V19z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact form: uses Formspree (replace YOUR_FORM_ID with your Formspree endpoint) -->
+        <form
+          class="contact__form reveal-up"
+          id="contactForm"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+        >
+          <div class="form__group">
+            <label for="name" data-i18n="form.name">Όνομα</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form__group">
+            <label for="subject" data-i18n="form.subject">Θέμα</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+          <div class="form__group">
+            <label for="message" data-i18n="form.message">Μήνυμα</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary form__submit">
+            <span data-i18n="form.submit">Αποστολή Μηνύματος</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <p class="form__status" id="formStatus"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== FOOTER =========== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <span class="footer__logo">VK</span>
+        <span class="footer__sep">·</span>
+        <span data-i18n="footer.tagline">Engineer · Researcher · Always learning</span>
+      </div>
+      <div class="footer__meta">
+        <span>© <span id="year">2026</span> Vasileios Karagiannidis</span>
+        <span class="footer__sep">·</span>
+        <span data-i18n="footer.built">Built with HTML, CSS & ♥</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
