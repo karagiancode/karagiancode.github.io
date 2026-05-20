@@ -75,7 +75,7 @@ const translations = {
     "skills.c8.title": "Τομείς Ενδιαφέροντος",
     "skills.certs": "Πιστοποιήσεις",
 
-     // Thesis
+    // Thesis
     "thesis.badge": "ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ · ΣΕ ΕΞΕΛΙΞΗ",
     "thesis.title": "DIY Ρομποτικός Βραχίονας",
     "thesis.subtitle": "Σχεδίαση & ανάπτυξη DIY robotic arm με σταθερό χειρισμό αντικειμένων — από αυγό έως 2kg",
@@ -101,13 +101,15 @@ const translations = {
     "proj.p4.title": "YouTube → MP3 Downloader",
     "proj.p4.desc": "Επιτραπέζια εφαρμογή για γρήγορη μετατροπή YouTube βίντεο σε MP3, με καθαρό GUI.",
     "proj.p5.title": "Movie Planner",
-    "proj.p5.desc": "Online real-time λίστα με ταινίες προς παρακολούθηση — προσωπικό watchlist.",
+    "proj.p5.desc": "Cloud-based watchlist app με real-time sync — προσωπική λίστα ταινιών με σύγχρονο GUI.",
     "proj.p6.title": "ItsMyBirthday",
     "proj.p6.desc": "Προσωπική ιστοσελίδα-πρόσκληση γενεθλίων — interactive front-end project.",
     "proj.p7.title": "Fast-Food App",
-    "proj.p7.desc": "Εφαρμογή διαχείρισης παραγγελιών για κατάστημα fast food — εμπνευσμένη από τα KFC.",
+    "proj.p7.desc": "Εφαρμογή διαχείρισης παραγγελιών για κατάστημα fast food με persistent storage — εμπνευσμένη από τα KFC.",
     "proj.p8.title": "Spot — Vision & Mobile Manipulation",
     "proj.p8.desc": "Ερευνητικό έργο: επεξεργασία vision data του Spot, αυτόνομη πλοήγηση και pick & place στο Isaac Sim.",
+    "proj.p9.title": "Data Recovery & Photo Organizer",
+    "proj.p9.desc": "Python εργαλείο ανάκτησης και αυτόματης ταξινόμησης αρχείων μετά από data loss — ομαδοποίηση φωτογραφιών βάσει EXIF metadata.",
     "proj.more": "Όλα τα έργα στο GitHub",
 
     // Contact
@@ -195,7 +197,7 @@ const translations = {
     "skills.c8.title": "Areas of Interest",
     "skills.certs": "Certifications",
 
-     // Thesis
+    // Thesis
     "thesis.badge": "BACHELOR THESIS · IN PROGRESS",
     "thesis.title": "DIY Robotic Arm",
     "thesis.subtitle": "Design & development of a DIY robotic arm with stable object handling — from an egg up to 2kg",
@@ -220,13 +222,15 @@ const translations = {
     "proj.p4.title": "YouTube → MP3 Downloader",
     "proj.p4.desc": "Desktop app for quick YouTube video to MP3 conversion, with a clean GUI.",
     "proj.p5.title": "Movie Planner",
-    "proj.p5.desc": "Online real-time movie watchlist — personal organization tool.",
+    "proj.p5.desc": "Cloud-based watchlist app with real-time sync — personal movie list with a modern GUI.",
     "proj.p6.title": "ItsMyBirthday",
     "proj.p6.desc": "Personal birthday invitation website — interactive front-end project.",
     "proj.p7.title": "Fast-Food App",
-    "proj.p7.desc": "Order management application for a fast-food store — inspired by my KFC days.",
+    "proj.p7.desc": "Order management app for a fast-food store with persistent storage — inspired by my KFC days.",
     "proj.p8.title": "Spot — Vision & Mobile Manipulation",
     "proj.p8.desc": "Research project: Spot vision data processing, autonomous navigation and pick & place in Isaac Sim.",
+    "proj.p9.title": "Data Recovery & Photo Organizer",
+    "proj.p9.desc": "Python tool for file recovery and automatic organization after data loss — photo grouping by EXIF metadata.",
     "proj.more": "All projects on GitHub",
 
     "contact.title": "Contact",
